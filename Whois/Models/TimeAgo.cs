@@ -27,15 +27,15 @@ namespace Whois.Models {
 
             if (!passado) text = "daqui ";
 
-            if (Math.Round(diff.TotalMinutes) < 1)
+            if (Math.Round(diff.TotalMinutes) < 1.0)
                 Format(diff.TotalSeconds, "segundo", "segundos");
-            else if (Math.Round(diff.TotalHours) < 1)
+            else if (diff.TotalHours < 1.0)
                 Format(diff.TotalMinutes, "minuto", "minutos");
-            else if (Math.Round(diff.TotalDays) < 1)
+            else if (diff.TotalDays < 1.0)
                 Format(diff.TotalHours, "hora", "horas");
-            else if (Math.Round(diff.TotalDays) < 30)
+            else if (diff.TotalDays < 30.0)
                 Format(diff.TotalDays, "dia", "dias");
-            else if (Math.Round(diff.TotalDays) < 365.25)
+            else if (diff.TotalDays < 365.25)
                 Format(diff.TotalDays / 30.4375, "mês", "meses");
             else
                 Format(diff.TotalDays / 365.25, "ano", "anos");
