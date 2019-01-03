@@ -4,7 +4,7 @@
 
 <div class="card text-white mt-3 @if (Model.Registrado) { <text>bg-success</text> } else {<text>bg-info</text> }">
     <div class="card-header">
-        <h4 class="m-0 d-inline-block">@Html.DisplayFor(model => model.Dominio)</h4>
+        <h4 class="m-0 d-inline-block"><strong>@if (Model.Registrado) {<a href="https://@Model.Dominio" class="discrete-link" target="_blank">@Model.Dominio</a>} else { @Model.Dominio}</strong></h4>
         <h4 class="card-title float-right m-0">
             @if (Model.Registrado) {
                 <span>Registrado</span>
@@ -15,9 +15,9 @@
     </div>
     @if (Model.Registrado) {
         <div class="card-body p-3">
-            <h6><strong>Registrado em</strong> @Html.DisplayFor(model => model.DataRegistro) (@TimeAgo.Get(Model.DataRegistro))</h6>
-            <h6><strong>Ultima alteração em</strong> @Html.DisplayFor(model => model.UltimaAlteracao) (@TimeAgo.Get(Model.UltimaAlteracao))</h6>
-            <h6><strong>Expira em</strong> @Html.DisplayFor(model => model.ExpiraEm) (@TimeAgo.Get(Model.ExpiraEm))</h6>
+            <h6><strong>Registrado em</strong> @Model.DataRegistro (@TimeAgo.Get(Model.DataRegistro))</h6>
+            <h6><strong>Ultima alteração em</strong> @Model.UltimaAlteracao (@TimeAgo.Get(Model.UltimaAlteracao))</h6>
+            <h6><strong>Expira em</strong> @Model.ExpiraEm (@TimeAgo.Get(Model.ExpiraEm))</h6>
             <h6>Name servers:</h6>
             <ul class="mb-0">
                 @foreach (var nameserver in Model.NameServers.Split('\n')) {
