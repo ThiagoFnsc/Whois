@@ -17,10 +17,13 @@ namespace Whois.Controllers {
             if (string.IsNullOrEmpty(dominio))
                 return View(db.Pesquisas.ToList());
             else {
+                ViewBag.Error = TempData["Error"] as string;
+                TempData.Remove("Error");
                 var pesquisas = db.Pesquisas.ToList().FindAll(pred => pred.Dominio == dominio.ToLower());
-                if (pesquisas.Count > 0 || (naoPesquisa.HasValue && naoPesquisa.Value))
+                if (pesquisas.Count > 0 || (TempData["NaoPesquisa"] != null && (bool)TempData["NaoPesquisa"])) {
+                    TempData.Remove("NaoPesquisa");
                     return View(pesquisas);
-                else
+                } else
                     return Pesquisar(dominio);
             }
         }
@@ -48,8 +51,7 @@ namespace Whois.Controllers {
                                 throw new Exception("Não foi possível estabelecer uma conexão ao jsonwhoisapi.com");
                             default:
                                 throw e;
-                        } 
-                        else
+                        } else
                         switch ((int)(e.Response as HttpWebResponse).StatusCode) {
                             case 422:
                                 throw new Exception("Domínio com formatação incorreta");
@@ -58,7 +60,9 @@ namespace Whois.Controllers {
                         }
                 }
             } catch (Exception e) {
-                return RedirectToAction("Index", new { error = e.Message, dominio = dominio, naoPesquisa = true });
+                TempData["Error"] = e.Message;
+                TempData["NaoPesquisa"] = true;
+                return RedirectToAction("Index", new { dominio = dominio });
             }
         }
 
