@@ -10,20 +10,25 @@
 </head>
 <body>
     <nav class="navbar navbar-dark bg-dark">
-        @Html.ActionLink("Pesquisa Whois", "Index", "PesquisaWhois", new { area = "" }, new { @class = "navbar-brand" })
-        <form class="form-inline" method="get" action="/PesquisaWhois/Index">
-            <div class="input-group">
-                <input class="form-control" type="search" placeholder="Domínio" name="dominio" aria-label="Search" required>
-                <div class="input-group-append">
-                    <button class="btn btn-outline-success" type="submit">Pesquisar</button>
-                </div>
+        <div class="row w-100" style="display:contents">
+            <div class="col-12 col-sm-4 col-md-6 col-lg-6 col-xl-6 d-flex justify-content-center justify-content-sm-start justify-content-md-start justify-content-lg-start justify-content-xl-start">
+                <a href="/PesquisaWhois/Index" class="navbar-brand">Pesquisa Whois</a>
             </div>
-        </form>
+            <div class="col-12 col-sm-8 col-md-6 col-lg-6 col-xl-6">
+                <form class="form-inline justify-content-center justify-content-sm-end justify-content-md-end justify-content-lg-end justify-content-xl-end" method="get" action="/PesquisaWhois/Index">
+                    <div class="input-group" style="display:contents">
+                        <input class="form-control" type="search" placeholder="Domínio" name="dominio" aria-label="Search" required>
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-success" type="submit">Pesquisar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
     </nav>
 
     <div class="container body-content" style="max-width:90%">
         @RenderBody()
-        <hr />
     </div>
 
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
