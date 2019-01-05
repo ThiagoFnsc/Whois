@@ -2,40 +2,48 @@
 @using Whois.Models
 @model PesquisaWhois
 
-<div class="card text-white mt-3 @if (Model.Registrado) { <text>bg-success</text> } else {<text>bg-info</text> }">
-    <div class="card-header">
-        <h4 class="m-0 d-inline-block"><strong>@if (Model.Registrado) {<a href="https://@Model.Dominio" class="discrete-link" target="_blank">@Model.Dominio</a>} else { @Model.Dominio}</strong></h4>
-        <h4 class="card-title float-right m-0">
-            @if (Model.Registrado) {
-                <span>Registrado</span>
-            } else {
-                <Span>Disponível para registro</Span>
-            }
-        </h4>
-    </div>
-    @if (Model.Registrado) {
-        <div class="card-body p-3">
-            <h6><strong>Registrado em</strong> @Model.DataRegistro (@TimeAgo.Get(Model.DataRegistro))</h6>
-            <h6><strong>Ultima alteração em</strong> @Model.UltimaAlteracao (@TimeAgo.Get(Model.UltimaAlteracao))</h6>
-            <h6><strong>Expira em</strong> @Model.ExpiraEm (@TimeAgo.Get(Model.ExpiraEm))</h6>
-            <h6>Name servers:</h6>
-            <ul class="mb-0">
-                @foreach (var nameserver in Model.NameServers.Split('\n')) {
-                    <li>@nameserver</li>
-                }
-            </ul>
+<div class="p-1 col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 d-flex">
+    <div class="card text-white w-100 text-center @if (Model.Registrado) { <text>bg-success</text> } else {<text>bg-info</text> }">
+        <div class="card-header">
+            <h4 class="m-0 d-inline-block"><strong>@if (Model.Registrado) {<a href="https://@Model.Dominio" class="discrete-link" target="_blank">@Model.Dominio</a>} else { @Model.Dominio}</strong></h4>
         </div>
-    }
-    <div class="card-footer">
-        <h6 class="mt-2 mb-0 align-middle d-inline-block">Pesquisado @TimeAgo.Get(Model.DataPesquisa)</h6>
-        <form class="d-inline" method="get" action="/PesquisaWhois/Pesquisar">
-            <input type="hidden" name="dominio" value="@Model.Dominio">
-            <div class="btn-group float-right" role="group" aria-label="Basic example">
-                @if (!Request.Params.AllKeys.Contains("dominio")) {
-                    <a href="/PesquisaWhois/Index?dominio=@Model.Dominio" class="btn btn-secondary">Mostrar apenas esse</a>
-                }
-                <button class="btn btn-primary">Atualizar</button>
-            </div>
-        </form>
+
+        <div class="card-body p-3">
+            @if (Model.Registrado) {
+                <h6><strong>Registrado em</strong> @Model.DataRegistro (@TimeAgo.Get(Model.DataRegistro))</h6>
+                <h6><strong>Ultima alteração em</strong> @Model.UltimaAlteracao (@TimeAgo.Get(Model.UltimaAlteracao))</h6>
+                <h6><strong>Expira em</strong> @Model.ExpiraEm (@TimeAgo.Get(Model.ExpiraEm))</h6>
+                <h6>Name servers:</h6>
+                <ul class="mb-0">
+                    @foreach (var nameserver in Model.NameServers.Split('\n')) {
+                        <li>@nameserver</li>
+                    }
+                </ul>
+            } else {
+                <h6 class="d-inline mt-2">Disponível,</h6>
+                <form class="d-inline" method="post" target="_blank" action="https://www.redehost.com.br/registro-de-dominio">
+                    <button type="submit" class="btn btn-primary"><img src="/Content/logo-redehost.svg" style="margin-top:-.45rem; height:1rem" />egistre agora!</button>
+                    @{
+                        List<string> dominio = new List<string>(Model.Dominio.Split('.'));
+                        string nome = dominio[0];
+                        dominio.RemoveAt(0);
+                    }
+                    <input type="hidden" name="NomeDominio" value="@nome" />
+                    <input type="hidden" name="Extensao" value="@string.Join(".", dominio)" />
+                </form>
+            }
+        </div>
+        <div class="card-footer">
+            <h6 class="mt-2 mb-3 align-middle d-inline-block">Pesquisado @TimeAgo.Get(Model.DataPesquisa)</h6>
+            <form class="d-inline" method="get" action="/PesquisaWhois/Pesquisar">
+                <input type="hidden" name="dominio" value="@Model.Dominio">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    @if (!Request.Params.AllKeys.Contains("dominio")) {
+                        <a href="/PesquisaWhois/Index?dominio=@Model.Dominio" class="btn btn-secondary">Mostrar apenas esse</a>
+                    }
+                    <button class="btn btn-primary">Atualizar</button>
+                </div>
+            </form>
+        </div>
     </div>
 </div>

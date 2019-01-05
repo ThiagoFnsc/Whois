@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="-1352 24 21.739 31.875999"
+   version="1.1"
+   id="svg26"
+   sodipodi:docname="logo-redehost.svg"
+   width="21.739"
+   height="31.875999"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <metadata
+     id="metadata30">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     id="namedview28"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="8.6369427"
+     inkscape:cx="36.581005"
+     inkscape:cy="19.977123"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Group_118" />
+  <defs
+     id="defs11">
+    <style
+       id="style2">
+      .cls-1 {
+        fill: #343d40;
+      }
+
+      .cls-2 {
+        fill: url(#radial-gradient);
+      }
+
+      .cls-3 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-4 {
+        fill: #9e4400;
+        opacity: 0.4;
+      }
+    </style>
+    <radialGradient
+       id="radial-gradient"
+       cx="18.174999"
+       cy="8.4650002"
+       r="18.136"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#f4a94e"
+         id="stop4" />
+      <stop
+         offset="0.903"
+         stop-color="#ef843c"
+         id="stop6" />
+    </radialGradient>
+    <clipPath
+       id="clip-path">
+      <path
+         id="Path_21"
+         data-name="Path 21"
+         d="m 16.884,22.038 a 7.436,7.436 0 0 0 4.535,-6.671 c 0,-2.961 -1.612,-5.716 -3.973,-6.371 A 4.439,4.439 0 0 0 16.041,5.21 4.315,4.315 0 0 0 11.841,4.442 C 10.757,1.387 8.339,0 4.835,0 2.249,0 0,1.48 0,2.961 v 4.666 a 5.5,5.5 0 0 1 4.685,-2.792 5.5,5.5 0 0 1 5.228,4.01 2.855,2.855 0 0 1 1.93,-0.75 2.8,2.8 0 0 1 2.923,2.736 2.348,2.348 0 0 1 -0.693,1.836 c 2.417,0 3.429,5.341 -1.518,5.341 H 5.06 C 2.211,18.009 0,19.9 0,23.874 v 8 H 5.36 V 25.3 c 0,-1.405 0.056,-2.024 1.743,-2.024 h 4.423 l 4.254,8.6 h 5.959 z"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+  </defs>
+  <g
+     id="Group_118"
+     data-name="Group 118"
+     transform="translate(-1352,24)">
+    <g
+       id="Group_120"
+       data-name="Group 120">
+      <g
+         id="Group_119"
+         data-name="Group 119">
+        <path
+           id="Path_19"
+           data-name="Path 19"
+           class="cls-2"
+           d="m 16.884,22.038 a 7.436,7.436 0 0 0 4.535,-6.671 c 0,-2.961 -1.612,-5.716 -3.973,-6.371 A 4.439,4.439 0 0 0 16.041,5.21 4.315,4.315 0 0 0 11.841,4.442 C 10.757,1.387 8.339,0 4.835,0 2.249,0 0,1.48 0,2.961 v 4.666 a 5.5,5.5 0 0 1 4.685,-2.792 5.5,5.5 0 0 1 5.228,4.01 2.855,2.855 0 0 1 1.93,-0.75 2.8,2.8 0 0 1 2.923,2.736 2.348,2.348 0 0 1 -0.693,1.836 c 2.417,0 3.429,5.341 -1.518,5.341 H 5.06 C 2.211,18.009 0,19.9 0,23.874 v 8 H 5.36 V 25.3 c 0,-1.405 0.056,-2.024 1.743,-2.024 h 4.423 l 4.254,8.6 h 5.959 z"
+           inkscape:connector-curvature="0"
+           style="fill:url(#radial-gradient)" />
+        <g
+           id="Group_118-2"
+           data-name="Group 118"
+           class="cls-3"
+           clip-path="url(#clip-path)">
+          <path
+             id="Path_20"
+             data-name="Path 20"
+             class="cls-4"
+             d="m 46.4,43.181 c 5.491,-0.187 4.066,-5.1 1.893,-5.228 1.649,-2.23 -0.375,-6.409 -4.141,-4.31 A 3.7,3.7 0 0 0 41.4,31 a 6.763,6.763 0 0 1 2.155,3.036 v 0 c 2.68,-2.193 6.353,1.162 4.141,3.823 2.904,0.618 2.755,5.247 -1.296,5.322 z"
+             transform="translate(-33.642,-25.191)"
+             inkscape:connector-curvature="0"
+             style="opacity:0.4;fill:#9e4400" />
+        </g>
+      </g>
+      <path
+         id="Path_22"
+         data-name="Path 22"
+         class="cls-4"
+         d="m 61.4,119.893 1.106,2.23 c 0,0 -0.075,-1.462 3.748,-3.223 a 11.579,11.579 0 0 1 -4.854,0.993 z"
+         transform="translate(-49.894,-96.619)"
+         inkscape:connector-curvature="0"
+         style="opacity:0.4;fill:#9e4400" />
+    </g>
+  </g>
+</svg>

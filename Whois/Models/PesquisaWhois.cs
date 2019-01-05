@@ -39,7 +39,7 @@ namespace Whois.Models {
 
         public static PesquisaWhois FromJSON(string json) {
             DateTime? DateFromJSON(string date) {
-                if (date == null || date == "") return null;
+                if (string.IsNullOrEmpty(date)) return null;
                 return DateTime.ParseExact(date, "yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture);
             }
             dynamic raw = JsonConvert.DeserializeObject(json);
@@ -50,7 +50,7 @@ namespace Whois.Models {
                 Dominio = raw.name,
                 JSON = json,
                 NameServers = String.Join("\n", raw.nameservers),
-                Registrado = raw.registered
+                Registrado = true
             };
             else return new PesquisaWhois() {
                 Registrado = false,

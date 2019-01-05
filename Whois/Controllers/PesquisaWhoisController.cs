@@ -48,7 +48,8 @@ namespace Whois.Controllers {
                                 throw new Exception("Não foi possível estabelecer uma conexão ao jsonwhoisapi.com");
                             default:
                                 throw e;
-                        } else
+                        } 
+                        else
                         switch ((int)(e.Response as HttpWebResponse).StatusCode) {
                             case 422:
                                 throw new Exception("Domínio com formatação incorreta");

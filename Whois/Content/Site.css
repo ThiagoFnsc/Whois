@@ -8,14 +8,22 @@
     padding-right: 15px;
 }
 
-.discrete-link{
-    color:lightblue;
+li {
+    list-style-type: none;
 }
 
-.discrete-link:hover{
-    text-decoration:none;
-    color:royalblue;
+ul {
+    padding: 0;
 }
+
+.discrete-link {
+    color: lightblue;
+}
+
+    .discrete-link:hover {
+        text-decoration: none;
+        color: royalblue;
+    }
 
 /* Set width on the form input elements since they're 100% wide by default */
 input,
