@@ -15,7 +15,7 @@ namespace Whois.Models {
         public static string Get(DateTime date) {
             string text = string.Empty;
             void Format(double numero, string singular, string plural) {
-                numero = Math.Round(numero);
+                numero = Math.Floor(numero);
                 text += $"{numero} {(numero == 1 ? singular : plural)}";
             }
             bool passado = new TimeSpan(DateTime.Now.Ticks - date.Ticks).TotalSeconds > 0;
